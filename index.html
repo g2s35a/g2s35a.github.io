@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kyeongho Kim — undergraduate researcher in Statistics at Inha University. Research in reliable and interpretable machine learning and statistical perspectives on neural networks.">
+  <meta name="author" content="Kyeongho Kim">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Kyeongho Kim | Academic Website">
+  <meta property="og:description" content="Research, publications, experience, and CV of Kyeongho Kim.">
+  <meta property="og:type" content="website">
+  <title>Kyeongho Kim</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #242b33;
+      --deep: #181e25;
+      --muted: #727984;
+      --soft: #545d68;
+      --link: #315f91;
+      --hairline: #e8ebee;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 34px; }
+    body { margin: 0; background: var(--white); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif; font-size: 14.5px; line-height: 1.72; -webkit-font-smoothing: antialiased; }
+    a { color: var(--link); text-decoration: none; text-underline-offset: 3px; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 2px; }
+    .container { width: min(100% - 46px, 790px); margin-inline: auto; }
+    .topbar { padding-top: 32px; }
+    .topnav { display: flex; gap: 24px; align-items: center; justify-content: flex-end; font-size: 13px; letter-spacing: .015em; }
+    .topnav a { color: #5a626c; }
+    .topnav a.is-active { color: var(--deep); font-weight: 600; }
+    .intro { padding-top: 82px; padding-bottom: 31px; }
+    .intro h1 { font-weight: 700; letter-spacing: -.048em; font-size: clamp(33px, 5.5vw, 43px); line-height: 1.2; color: var(--deep); margin: 0 0 9px; }
+    .intro .role { font-size: 16px; color: #313b48; margin: 0 0 13px; }
+    .email { font-size: 13.5px; color: #66707c; margin: 0 0 12px; }
+    .socials { display: flex; gap: 17px; align-items: center; flex-wrap: wrap; font-size: 13px; }
+    .socials a { color: var(--link); }
+    .socials a::after { content: " ↗"; font-size: 10px; }
+    .socials a[href^="mailto:"]::after { content: ""; }
+    main { padding-bottom: 85px; }
+    section { margin-top: 41px; scroll-margin-top: 25px; }
+    section h2 { font-size: 21px; line-height: 1.3; letter-spacing: -.036em; margin: 0 0 17px; font-weight: 690; color: var(--deep); }
+    section p { margin: 0 0 12px; }
+    .prose { max-width: 760px; }
+    .prose strong { font-weight: 650; }
+    .area { color: #515b66; font-size: 13px; margin: 12px 0 0; }
+    .publication { margin: 0 0 29px; }
+    .publication:last-child { margin-bottom: 0; }
+    .pub-title { font-size: 15.2px; line-height: 1.45; font-weight: 690; letter-spacing: -.007em; margin: 0 0 4px; color: #222c35; }
+    .pub-authors { margin: 0 0 1px; font-size: 13.6px; color: #3f4750; }
+    .pub-meta { margin: 0 0 5px; font-size: 13px; color: #69727b; font-style: italic; }
+    .pub-actions { font-size: 12.4px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 3px; }
+    details { display: block; }
+    details summary { color: var(--link); cursor: pointer; display: inline; list-style: none; font-size: 12.4px; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before { content: "+ "; font-weight: 650; }
+    details[open] summary::before { content: "− "; }
+    .pub-summary { background: #f8f9fa; border-left: 2px solid #d5dde5; margin: 11px 0 0; padding: 11px 14px; color: #4c5662; font-size: 13px; line-height: 1.75; }
+    .pub-summary p { margin: 0; }
+    .items { display: grid; gap: 19px; }
+    .item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: baseline; }
+    .item h3 { margin: 0 0 2px; font-size: 14.5px; color: #26313b; font-weight: 690; line-height: 1.45; }
+    .item .subline { margin: 0 0 4px; color: #515b66; font-size: 13.2px; }
+    .item .detail { margin: 4px 0 0; color: #65717b; font-size: 13px; }
+    .when { padding-top: 1px; color: #6f7882; font-size: 12.2px; white-space: nowrap; text-align: right; }
+    .description { font-size: 13.2px; color: #505b66; margin-top: 6px; }
+    .description p { margin-bottom: 6px; }
+    .description ul { margin: 4px 0 0; padding-left: 18px; }
+    .description li { margin-bottom: 3px; }
+    .project { margin-bottom: 17px; }
+    .project:last-child { margin-bottom: 0; }
+    .project h3 { margin: 0 0 3px; font-size: 14.2px; font-weight: 650; color: #26313b; }
+    .project p { font-size: 13.2px; color: #555f6a; margin: 0; }
+    .project .when { float: right; margin: 3px 0 0 15px; }
+    .awards { display: grid; gap: 13px; }
+    .award { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 18px; }
+    .award strong { display: block; font-size: 13.7px; font-weight: 650; color: #303a44; }
+    .award p { color: #626c77; font-size: 13px; margin: 0; }
+    .activities-list { display: grid; gap: 7px; }
+    .activity { display: flex; justify-content: space-between; align-items: baseline; gap: 15px; font-size: 13.3px; }
+    .activity span:first-child { color: #3c4650; }
+    .activity span:last-child { white-space: nowrap; color: #7b8490; font-size: 12.1px; }
+    .course-details { margin-top: 10px; }
+    .course-details .pub-summary { margin-top: 7px; }
+    .bottom { border-top: 1px solid var(--hairline); margin-top: 68px; padding: 18px 0 35px; font-size: 11.5px; color: #89919a; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 580px) {
+      body { font-size: 14px; }
+      .container { width: min(100% - 36px, 790px); }
+      .topbar { padding-top: 22px; }
+      .topnav { gap: 19px; }
+      .intro { padding-top: 57px; padding-bottom: 20px; }
+      .intro h1 { font-size: 35px; }
+      section { margin-top: 37px; }
+      section h2 { font-size: 20px; }
+      .item, .award { grid-template-columns: 1fr; gap: 2px; }
+      .item .when, .award .when { text-align: left; grid-row: 1; font-size: 11.5px; margin-bottom: 2px; }
+      .project .when { float: none; display: block; text-align: left; margin: 0 0 2px; }
+      .activity { align-items: flex-start; flex-direction: column; gap: 1px; margin-bottom: 4px; }
+      .socials { gap: 14px; }
+      .bottom { margin-top: 48px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print { .topnav, .course-details { display: none; } body { color: #000; } .intro { padding-top: 10px; } .container { width: 100%; max-width: none; } a { color: inherit; } }
+  </style>
+</head>
+<body>
+  <header class="topbar container">
+    <nav class="topnav" aria-label="Primary navigation">
+      <a class="is-active" href="#about">about</a>
+      <a href="#publications">publications</a>
+      <a href="#research">research</a>
+      <a href="CV_public.pdf" target="_blank" rel="noopener">cv ↗</a>
+    </nav>
+  </header>
+
+  <div class="intro container" id="about">
+    <h1>Kyeongho Kim</h1>
+    <p class="role">B.S. Student in Statistics @ Inha University</p>
+    <p class="email">g2s35a@gmail.com</p>
+    <div class="socials" aria-label="Contact and profile links">
+      <a href="mailto:g2s35a@gmail.com">Email</a>
+      <a href="https://github.com/g2s35a" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="CV_public.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <section id="profile" aria-labelledby="profile-title">
+      <h2 id="profile-title">Profile</h2>
+      <div class="prose">
+        <p>Hi, I am an undergraduate student in <strong>Statistics</strong> at <strong>Inha University</strong>, pursuing a double major in Software Convergence Engineering. I am currently an undergraduate researcher in the <strong>Statistical Theory Research Lab</strong>, advised by Prof. <strong>Ilsang Ohn</strong>. I also conducted research in the <strong>MIND Lab (Modeling and Interpreting Data)</strong>, advised by Prof. <strong>Doowon Choi</strong>.</p>
+        <p>My research interests include <strong>reliable and interpretable machine learning</strong> and <strong>statistical perspectives on neural networks</strong>, with an emphasis on understanding learning methods through both theoretical analysis and practical applications.</p>
+      </div>
+    </section>
+
+    <section id="publications" aria-labelledby="pub-title">
+      <h2 id="pub-title">Publications</h2>
+      <div class="publication">
+        <h3 class="pub-title">Rate-Optimal Neural Boundary Detection from Unlabeled Noisy Images</h3>
+        <p class="pub-authors"><strong>Kyeongho Kim</strong>, Ilsang Ohn</p>
+        <p class="pub-meta">Under review · arXiv preprint</p>
+        <div class="pub-actions">
+          <details>
+            <summary>research overview</summary>
+            <div class="pub-summary"><p>Neural network-based approaches to unsupervised boundary detection in noisy intensity images, including surrogate loss functions and analysis of rate-optimal convergence under varying signal-to-noise ratios. This overview is based on the supplied CV, not the paper's official abstract.</p></div>
+          </details>
+        </div>
+      </div>
+      <div class="publication">
+        <h3 class="pub-title">A Partial-Correlation-Refined Attention Framework for Localized Feature–Time Explanation in Manufacturing Quality Diagnosis</h3>
+        <p class="pub-authors"><strong>Kyeongho Kim</strong>, Sangjin Choi, Doowon Choi</p>
+        <p class="pub-meta">Under review</p>
+        <div class="pub-actions">
+          <details>
+            <summary>research overview</summary>
+            <div class="pub-summary"><p>An interpretable multivariate time-series analysis framework that refines attention with partial-correlation information to highlight feature–time importance and support root-cause identification in manufacturing quality diagnosis. This overview is based on the supplied CV, not the paper's official abstract.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <div class="items">
+        <div class="item">
+          <div>
+            <h3>Inha University</h3>
+            <p class="subline">B.S. in Statistics · Double Major in Software Convergence Engineering</p>
+            <p class="detail">GPA: 4.32 / 4.50 (Major: 4.42 / 4.50) · First-class honors</p>
+            <p class="detail">Completed in 7 semesters</p>
+          </div>
+          <span class="when">Mar. 2021 – Feb. 2027 (expected)</span>
+        </div>
+      </div>
+      <div class="course-details">
+        <details>
+          <summary>selected coursework</summary>
+          <div class="pub-summary">
+            <p><strong>Math &amp; Statistics:</strong> Bayesian Statistics, Statistical Machine Learning, Mathematical Statistics, Multivariate Statistics, Survival Analysis, Time Series Analysis, Computational Statistics, Categorical Data Analysis, Regression Analysis, Linear Algebra, and others.</p>
+            <p style="margin-top:8px"><strong>Computer Science:</strong> Algorithms, Computer Networks, Object-Oriented Programming, Statistical Software, and Programming Languages.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="research" aria-labelledby="research-title">
+      <h2 id="research-title">Research Experience</h2>
+      <div class="items">
+        <div class="item">
+          <div>
+            <h3>Statistical Theory Research Lab · Inha University</h3>
+            <p class="subline">Undergraduate Researcher · Advisor: Prof. Ilsang Ohn</p>
+            <div class="description"><ul>
+              <li>Developed neural network methods for unsupervised boundary detection in noisy intensity images, using surrogate loss functions and studying convergence rates across noise levels.</li>
+              <li>Investigated discrete diffusion methods for denoising weak-signal images, including Gaussian and Poisson diffusion.</li>
+            </ul></div>
+          </div>
+          <span class="when">Sep. 2025 – Present</span>
+        </div>
+        <div class="item">
+          <div>
+            <h3>MIND Lab · Inha University</h3>
+            <p class="subline">Undergraduate Researcher · Advisor: Prof. Doowon Choi</p>
+            <div class="description"><ul>
+              <li>Developed partial-correlation-refined attention for interpretable multivariate time-series anomaly analysis and root-cause identification.</li>
+              <li>Explored VAE models combined with symbolic regression or online learning.</li>
+            </ul></div>
+          </div>
+          <span class="when">Jun. 2025 – Aug. 2026</span>
+        </div>
+        <div class="item">
+          <div>
+            <h3>UNIGENCE Co., Ltd.</h3>
+            <p class="subline">Algorithm Development Intern</p>
+            <div class="description">Worked on industrial sensor signal modeling, fault detection, and time-series anomaly analysis using interpretation methods including Grad-CAM, XCM, and Shapley values.</div>
+          </div>
+          <span class="when">Aug. – Sep. 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected Projects</h2>
+      <div class="project">
+        <span class="when">May – Jun. 2026</span>
+        <h3>Conformalized Survival Analysis</h3>
+        <p>Studied conformalized prediction for general right-censored survival data and derived lower prediction bounds for censored patient outcomes.</p>
+      </div>
+      <div class="project">
+        <span class="when">May – Jun. 2026</span>
+        <h3>Korea Meteorological Administration Weather BigData Contest</h3>
+        <p>Built a LightGBM-based multiclass pipeline using 2.4 million cattle records and engineered weather and temperature–humidity-index features for slaughter-grade prediction.</p>
+      </div>
+      <div class="project">
+        <span class="when">May – Jun. 2025</span>
+        <h3>Data-Driven Customer Segmentation and Income Conformal Prediction</h3>
+        <p>Combined K-means segmentation, Random Forest classification, PCA, and conformal prediction for uncertainty-aware customer analysis.</p>
+      </div>
+      <div class="project">
+        <span class="when">Apr. – Jun. 2025</span>
+        <h3>Image Classification with Vision Transformer</h3>
+        <p>Completed a landmark image-classification challenge using Vision Transformers in Mathematics for Artificial Intelligence I.</p>
+      </div>
+    </section>
+
+    <section id="awards" aria-labelledby="awards-title">
+      <h2 id="awards-title">Honors and Awards</h2>
+      <div class="awards">
+        <div class="award">
+          <div><strong>Third Prize · Inha Statistics &amp; Data Science Graduate School Seminar</strong><p>Boundary detection from noisy images; convergence-rate analysis and boundary recovery.</p></div>
+          <span class="when">2026</span>
+        </div>
+        <div class="award">
+          <div><strong>Bronze Prize · KIIE Undergraduate Project Competition</strong><p>Interpretable attention for industrial time-series anomaly detection.</p></div>
+          <span class="when">2025</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" aria-labelledby="activities-title">
+      <h2 id="activities-title">Activities and Teaching</h2>
+      <div class="activities-list">
+        <div class="activity"><span>President, Statistics Student Council · Inha University</span><span>2025</span></div>
+        <div class="activity"><span>Learn-Stat, Mentor</span><span>Dec. 2025 – Present</span></div>
+        <div class="activity"><span>Statistics Mentoring, Mentor</span><span>Mar. – Dec. 2025</span></div>
+        <div class="activity"><span>High School Mathematics Instructor</span><span>Jan. 2024 – Present</span></div>
+        <div class="activity"><span>Republic of Korea Army · Sergeant</span><span>Jul. 2022 – Jan. 2024</span></div>
+      </div>
+    </section>
+
+    <footer class="bottom" aria-label="Site information"><span>Last updated: October 2026.</span><span>© 2026 Kyeongho Kim.</span></footer>
+  </main>
+</body>
+</html>
