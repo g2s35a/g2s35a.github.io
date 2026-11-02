@@ -21,6 +21,22 @@
       --hairline: #e8ebee;
       --white: #ffffff;
     }
+        
+    .intro-text {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .profile-photo {
+        width: 155px;
+        height: 190px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+    
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 34px; }
     body { margin: 0; background: var(--white); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif; font-size: 14.5px; line-height: 1.72; -webkit-font-smoothing: antialiased; }
@@ -32,7 +48,14 @@
     .topnav { display: flex; gap: 24px; align-items: center; justify-content: flex-end; font-size: 13px; letter-spacing: .015em; }
     .topnav a { color: #5a626c; }
     .topnav a.is-active { color: var(--deep); font-weight: 600; }
-    .intro { padding-top: 82px; padding-bottom: 31px; }
+    .intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+        padding-top: 65px;
+        padding-bottom: 20px;
+    }
     .intro h1 { font-weight: 700; letter-spacing: -.048em; font-size: clamp(33px, 5.5vw, 43px); line-height: 1.2; color: var(--deep); margin: 0 0 9px; }
     .intro .role { font-size: 16px; color: #313b48; margin: 0 0 13px; }
     .email { font-size: 13.5px; color: #66707c; margin: 0 0 12px; }
@@ -91,7 +114,14 @@
       .container { width: min(100% - 36px, 790px); }
       .topbar { padding-top: 22px; }
       .topnav { gap: 19px; }
-      .intro { padding-top: 57px; padding-bottom: 20px; }
+
+      .intro {
+          padding-top: 57px;
+          padding-bottom: 20px;
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          gap: 20px;
+      }
       .intro h1 { font-size: 35px; }
       section { margin-top: 37px; }
       section h2 { font-size: 20px; }
@@ -117,14 +147,21 @@
   </header>
 
   <div class="intro container" id="about">
-    <h1>Kyeongho Kim</h1>
-    <p class="role">B.S. Student in Statistics @ Inha University</p>
-    <p class="email">g2s35a@gmail.com</p>
-    <div class="socials" aria-label="Contact and profile links">
-      <a href="mailto:g2s35a@gmail.com">Email</a>
-      <a href="https://github.com/g2s35a" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="CV_public.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    <div class="intro-text">
+      <h1>Kyeongho Kim</h1>
+      <p class="role">B.S. Student in Statistics @ Inha University</p>
+      <p class="email">g2s35a@gmail.com</p>
+  
+      <div class="socials" aria-label="Contact and profile links">
+        <a href="mailto:g2s35a@gmail.com">Email</a>
+        <a href="https://github.com/g2s35a">GitHub</a>
+        <a href="CV_public.pdf">CV (PDF)</a>
+      </div>
     </div>
+  
+    <img src="profile.png"
+         alt="Kyeongho Kim"
+         class="profile-photo">
   </div>
 
   <main class="container">
